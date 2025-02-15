@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // Экспорт в статический HTML
+  output: "export",
   images: {
-    unoptimized: true, // Отключает оптимизацию изображений (GitHub Pages не поддерживает)
+    unoptimized: true,
   },
-  basePath: "/portfolio", // Укажи название твоего репо (см. пункт 3)
-  assetPrefix: "/portfolio",
+  trailingSlash: true, // 🔴 Добавляет слэш в конце путей (исправляет 404)
 };
 
 module.exports = nextConfig;
